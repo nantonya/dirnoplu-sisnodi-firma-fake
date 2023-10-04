@@ -11,6 +11,7 @@ cd dirnoplu-sisnodi-firma-fake
 ```sh
 npm install
 ```
+4. Ejecutamos el proyecto
 ```sh
 npm run dev
 ```
