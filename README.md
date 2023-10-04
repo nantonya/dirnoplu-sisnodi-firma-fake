@@ -7,11 +7,10 @@ git clone https://github.com/nantonya/dirnoplu-sisnodi-firma-fake.git
 ```sh
 cd dirnoplu-sisnodi-firma-fake
 ```
-3. Instalando dependencias npm
+3. Instalando dependencias npm - node v16
 ```sh
 npm install
 ```
 ```sh
-nvm use 16
 npm run dev
 ```
