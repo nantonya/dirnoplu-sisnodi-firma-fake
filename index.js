@@ -45,6 +45,23 @@ app.get('', (req, res) => {
     message : 'INICIAMOS CON LA FIRMA DIGITAL FAKE',
   });   
 });
+app.get('/api/servicio/seprec/v1/nits/:nit/matriculas', (req, res) => {
+  console.log('**********************', req.params.nit);
+  res.status(201).json({
+    "rutina": "VRCONAG",
+    "texto": "1028415020",
+    "detalle": {
+        "infoNit": [
+            {
+                "IdMatricula": "1028415020",
+                "RazonSocial": "BANCO UNION S.A."
+            }
+        ]
+    },
+    "cantidad": "1",
+    "error": "0000"
+});   
+});
 app.post('/sign', async (req, res) => {
   try {
     // console.log('obtenemos documento',req.body);
@@ -81,7 +98,7 @@ app.post('/sign', async (req, res) => {
 
 
 app.listen(port, () =>{
-  // console.log('Mi port' + port);
+  console.log('Mi port' + port);
   console.log('¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶');
   console.log('¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_______¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶');
   console.log('¶¶¶¶¶¶¶¶¶¶¶¶¶_________________________¶¶¶¶¶¶¶¶¶¶¶¶');
